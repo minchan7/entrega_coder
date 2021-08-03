@@ -1,0 +1,27 @@
+
+.imagenContacto {
+    background-image: url(../ASSETS/swimming.jpg);
+    background-repeat: no-repeat;
+    height: 800px;
+}
+
+.suscripcion {
+    margin-top: 10px;
+    margin-left:15px;
+}
+
+textarea {
+    margin-top: 20px;
+}
+
+form {
+    color: rgb(0, 102, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 50vw;
+    height: 100vh;
+    margin: 5em 5em 5em 10em;
+}

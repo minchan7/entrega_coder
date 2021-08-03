@@ -1,0 +1,23 @@
+#novedades {
+  color: black;
+  font-size: xx-large;
+  text-align: left;
+}
+
+.bicicleta {
+  background-image: url(../ASSETS/ironman.jpg);
+  background-repeat: no-repeat;
+  height: 800px;
+  width: 1220px;
+}
+
+#tablaDeBici {
+  text-align: center;
+}
+
+#tituloDeTabla {
+  background-color: chartreuse;
+  color: darkblue;
+  border-color: black;
+}
+/*# sourceMappingURL=bike.css.map */

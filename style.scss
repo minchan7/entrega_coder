@@ -1,0 +1,311 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+@import "bike";
+
+@import "contact";
+
+/* Tipografias
+
+font-family: 'Roboto', sans-serif;
+
+*/
+
+$colorPrincipal: #D3232D;
+
+a {
+    text-decoration: none;
+    color: white;
+    list-style-type: none;
+} 
+
+#tituloPrincipal__H1--propiedades {
+    
+    font:{
+        family: 'Roboto', sans-serif;
+        weight: normal;
+        size: 6vw;
+    }
+    color: $colorPrincipal;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.tituloSecundario__H2--color {
+    color:$colorPrincipal;
+    font: {
+        weight: bold;
+    }
+}
+
+.header__navMenu {
+    background-color: black;
+    top: 3px;
+    display: flex;
+    border:cornsilk solid 3px;
+    height: 80px;
+    flex-direction: column;
+    justify-content: left; /* horizontal */
+    align-items: left; /* vertical */
+
+    
+    // .subItem .link {
+    //     display: block;
+    //     position: relative;
+    //     margin: 5px 50px 5px -5px;
+    //     align-content: center;
+    //     align-items: center;
+    // }   
+    
+    a {
+        text-decoration: none;
+        color: white;
+        list-style-type: none
+    }
+
+
+    li>.header__navMenu--subItem{
+        position: absolute;
+        display: none;
+        background-color:transparent;
+        top: 32px;
+        left: -34px;
+    }
+    
+    
+}
+
+i {
+    font-size: 2rem;
+    margin: 0.2rem;
+    color: brown;
+}
+
+.solo {
+    flex-grow: 2;
+}
+
+.video {    
+    padding-bottom: 85%; /* 16/9 ratio */
+    padding-top: 85px; /* IE6 workaround*/
+    height: 0;
+    overflow: hidden;
+    display: grid;
+    grid-column: 1/3;
+    grid-row: 3/4;
+    justify-content: center;
+    width: 100%    !important;
+    height: auto   !important;
+}
+
+// footer {
+//     background-color: black;
+// }
+
+
+// nav ul ul li {
+//     display: block;
+//     position: relative;
+//     margin: 5px 50px 5px -5px;
+//     }
+
+.navMenu__subItem--link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li:hover .header__navMenu--subItem {
+    display: block;
+}
+
+nav li:hover {
+    background-color: white;
+}
+
+nav a:hover {
+    color: black;
+}
+
+body {
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ranking {
+    color: brown;
+    background-color: darkblue;
+    grid-column: 1/3;
+    grid-row: 3/4;
+    border: solid 2px darkcyan;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap
+}
+
+.ranking__lista {
+
+    list-style: none;
+    align-self: center;
+}
+
+// EACH
+
+$rankingMapa:(1: red,2: blue,3: yellow,4:black,5:pink,6:brown,7:green,8:orange,9:violet,10:white);
+
+@each $value, $color in $rankingMapa {
+    .ranking__lista--item#{$value} {
+        color: $color;
+    }
+}
+
+
+footer nav li {
+    display: flex;
+    flex-direction: row;
+    // border: solid 2px white;
+    padding: 2px;
+    border-radius: 5px;
+    transition: 1s;
+    position: relative;
+    background-color: black;
+    width: 5vw;
+}
+
+.zocaloFlex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* horizontal */
+    align-items: center; /* vertical */
+}
+
+.zocaloInferior {
+    background-color: black;
+    top: 2px;
+    border:cornsilk solid 3px;
+    height: 80px;
+    display: grid;
+    grid-row: 5/6;
+    grid-column: 1/4;
+    width: 105vw;
+}
+
+.redesFlex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* horizontal */
+    align-items: center; /* vertical */
+    width: 97vw;
+}
+
+#cuerpoGrid {
+    display: grid;
+    grid-template-columns: 50% 50% ;
+    grid-template-rows: 25% 25% 10% 35% 5% ;
+    column-gap: .2rem;
+    gap: 15rem;
+}
+
+// EACH para size de titulares
+
+@each $titular, $size in (h2: 1.5em, h4: 1em, h5: 1.3em) {
+    #{$titular} {
+      font-size: $size !important;
+    }
+  }
+
+
+@media only screen and (min-width: 480px) {
+    
+    body {
+        background-color: #000000;
+        width: 96vw;
+    }
+
+    nav>ul>ul {
+        position: absolute;
+        display: none;
+        background-color:transparent;
+        top: 30px;
+        left: -30px;
+    }
+    
+    .header__navMenu {
+        background-color: black;
+        top: 3px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around; /* horizontal */
+        align-items: center; /* vertical */
+        border:cornsilk solid 3px;
+        height: 80px;
+        width: 99vw;
+    }
+
+
+    nav li {
+        display: flex;
+        flex-direction: row;
+        border: solid 1px white;
+        padding: 2px;
+        border-radius: 5px;
+        transition: 1s;
+        position: relative;
+        width: 8vw;
+        background-color: black;
+        justify-content: center;
+    }
+
+    .ranking {
+        color: brown;
+        background-color: rgb(101,122,98);
+        grid-column: 3/4;
+        grid-row: 1/3;
+        border: solid 2px rgb(114, 114, 114);
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column wrap
+    }
+
+    #cuerpoGrid {
+        display: grid;
+        grid-template-columns: 40% 40% 20% ;
+        grid-template-rows: 20% 20% 60%  ;
+        gap: .1rem;
+        margin: 2rem 0;
+    }
+
+    .card {
+        column-gap: .1rem;
+        margin-left: 4rem;
+    }
+
+
+    .zocaloInferior {
+        background-image: linear-gradient(to top, black, rgb(58, 58, 70));
+        top: 2px;
+        display: flex;
+        border:cornsilk solid 3px;
+        height: 80px;
+        width: 99vw;
+    }
+    
+    .video {
+        display: grid;
+        justify-content: center;
+        align-content:flex-start;
+        position: relative;
+        padding-bottom: 56.25%; /* 16/9 ratio */
+        padding-top: 180px; /* IE6 workaround*/
+        height: 0;
+        overflow: hidden;
+        grid-column: 1/3;
+        grid-row: 3/4;
+    }
+
+}
